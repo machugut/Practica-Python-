@@ -1,140 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    </body>
-</html>>
+  <meta charset="UTF-8" />
+  <title>Lesson 1 — if / elif / else</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px;
+    }
+    .badge {
+      background: #6366f1;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { color: #94a3b8; margin-bottom: 40px; }
 
-<style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:serif, Helvetica, sans-serif;
-        }
+    .code-block {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 13.5px;
+      line-height: 1.8;
+      width: 100%;
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+    .kw  { color: #818cf8; }
+    .fn  { color: #34d399; }
+    .str { color: #fbbf24; }
+    .cm  { color: #475569; }
+    .num { color: #fb923c; }
 
+    form {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      width: 100%;
+      max-width: 560px;
+    }
+    input[type="number"] {
+      flex: 1;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 16px;
+      padding: 12px 16px;
+      outline: none;
+    }
+    input[type="number"]:focus { border-color: #6366f1; }
+    button {
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #4f46e5; }
 
+    .result {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      width: 100%;
+      max-width: 560px;
+    }
+    .result .emoji { font-size: 3rem; margin-bottom: 12px; }
+    .result .grade { font-size: 4rem; font-weight: 900; color: #6366f1; }
+    .result .msg { color: #94a3b8; margin-top: 8px; font-size: 1.1rem; }
+    .result .raw { color: #475569; font-size: 13px; margin-top: 16px; font-family: monospace; }
+  </style>
+</head>
+<body>
 
+  <div class="badge">Lesson 1</div>
+  <h1>if / elif / else</h1>
+  <p class="subtitle">Enter a score (0–100) and see which branch runs.</p>
 
-        body{
-            background:#00306b;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
+  <div class="code-block">
+    <span class="cm"># Python code running on the server (app.py)</span><br><br>
+    <span class="kw">if</span> score &gt;= <span class="num">90</span>:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;grade = <span class="str">"A"</span><br>
+    <span class="kw">elif</span> score &gt;= <span class="num">75</span>:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;grade = <span class="str">"B"</span><br>
+    <span class="kw">elif</span> score &gt;= <span class="num">60</span>:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;grade = <span class="str">"C"</span><br>
+    <span class="kw">elif</span> score &gt;= <span class="num">40</span>:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;grade = <span class="str">"D"</span><br>
+    <span class="kw">else</span>:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;grade = <span class="str">"F"</span>
+  </div>
 
+  <form method="POST">
+    <input type="number" name="score" min="0" max="100"
+           placeholder="Enter score 0–100"
+           value="{{ score if score is not none else '' }}" required />
+    <button type="submit">Check →</button>
+  </form>
 
-
-
-        .container{
-            width:450px;
-            background:white;
-            padding:50px;
-            border-radius:10px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.2);
-        }
-
-
-
-
-        h2{
-            text-align:center;
-            margin-bottom:20px;
-            color:#b80a0a;
-        }
-
-
-
-
-        .form-group{
-            margin-bottom:18px;
-        }
-
-
-
-
-        label{
-            display:block;
-            font-weight:bold;
-            margin-bottom:6px;
-            color:#0bac18;
-        }
-
-
-
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="number"],
-        input[type="date"],
-        input[type="file"],
-        input[type="range"]{
-            width:100%;
-            padding:10px;
-            border:1px solid #ff0000;
-            border-radius:5px;
-            margin-top:5px;
-        }
-
-
-
-
-        .options{
-            margin-top:8px;
-            display:flex;
-            gap:15px;
-            align-items:center;
-        }
-
-
-
-
-        button{
-            width:100%;
-            padding:12px;
-            background:#007bff;
-            color:rgb(172, 16, 16);
-            border:none;
-            border-radius:5px;
-            font-size:16px;
-            cursor:baseline;
-        }
-
-
-
-
-        button:hover{
-            background:#000000;
-        }
-    </style>
-
-
-<div class="container">
-
-    <h2>Login Form</h2>
-
-    <form action="/login" method="POST">
-
-        
-
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="password" placeholder="Enter password">
-
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
-        </div>
-
-        <button type="submit">Login</button>
-
-    </form>
-
-</div>
+  {% if result %}
+  <div class="result">
+    <div class="emoji">{{ result.emoji }}</div>
+    <div class="grade">{{ result.grade }}</div>
+    <div class="msg">{{ result.message }}</div>
+    <div class="raw">score = {{ score }} → grade = "{{ result.grade }}"</div>
+  </div>
+  {% endif %}
 
 </body>
-</html>>
+</html>
