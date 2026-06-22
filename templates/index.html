@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    </body>
+</html>>
+
+<style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:serif, Helvetica, sans-serif;
+        }
+
+
+
+
+        body{
+            background:#00306b;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+
+
+
+        .container{
+            width:450px;
+            background:white;
+            padding:50px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        }
+
+
+
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#b80a0a;
+        }
+
+
+
+
+        .form-group{
+            margin-bottom:18px;
+        }
+
+
+
+
+        label{
+            display:block;
+            font-weight:bold;
+            margin-bottom:6px;
+            color:#0bac18;
+        }
+
+
+
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"],
+        input[type="range"]{
+            width:100%;
+            padding:10px;
+            border:1px solid #ff0000;
+            border-radius:5px;
+            margin-top:5px;
+        }
+
+
+
+
+        .options{
+            margin-top:8px;
+            display:flex;
+            gap:15px;
+            align-items:center;
+        }
+
+
+
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#007bff;
+            color:rgb(172, 16, 16);
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:baseline;
+        }
+
+
+
+
+        button:hover{
+            background:#000000;
+        }
+    </style>
+
+
+<div class="container">
+
+    <h2>Login Form</h2>
+
+    <form action="/login" method="POST">
+
+        
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password">
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>>
