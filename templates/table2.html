@@ -4,8 +4,20 @@
 table, th, td {
   border:1px solid black;
 }
+table, td, th {  
+  border: 1px solid #b94d4d;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 10px;
+}
 </style>
-<body>
 <table>
   <tr>
     <th rowspan="2">Student id </th>
@@ -15,10 +27,10 @@ table, th, td {
     <th rowspan="2">Final</th>
   </tr>
   <tr>
-    <td>Theory</td>
-    <td>Lab</td>
-    <td>Theory</td>
-    <td>Lab</td>
+    <th>Theory</th>
+    <th>Lab</th>
+    <th>Theory</th>
+    <th>Lab</th>
   </tr>
   <tr>
     <td>2024001</td>
