@@ -6,20 +6,23 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: white;
+    background: rgb(197, 196, 196);
     text-align: center;
 }
 header{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 252, 252);
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: black;
 }
 nav{
     text-align: center;
     padding: 15px;
+    background-color: rgb(97, 96, 96);
+    color: white;
 }
 nav a {
-    color : rgb(0, 0, 0) ;
+    color : rgb(255, 255, 255) ;
     text-decoration: none;
     margin : 15px ; 
     font-weight: bold;
@@ -42,36 +45,44 @@ article{
     background: white;
     border-left: 5px solid blue;
     border: 1px solid black;
+    width: 60%;
 }
 aside{
-    flex:3;
     background:white;
     border: 2px solid black;
-    text-align: left;
-} 
-footer{
-    background: rgb(255, 255, 255);
-    color :rgb(0, 0, 0) ;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    float: right;
+    margin-top: 15px;
+    padding-bottom: 170px;
+    margin-right: 30px;
+}
+footer {
+    background: rgb(0, 0, 0);
+    color :rgb(255, 255, 255) ;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-    border: 2px solid black;
 }
 section{
     border: 2px solid black;
     padding: 10px ;
+    background-color: white;
 }
 .fraseuno{
-    background-color: red;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.frasedos{
-    background-color: rgb(58, 161, 9);
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+.dark{
+    background-color: black;
+    color: white;
 }
-.frasetres{
-    text-align: right;
-    padding-right: 50px;
+.seccionesuno{
+    display :flex;
+    width: 60%;
+}
+.seccionesdos{
+    width: 60%;
+    display: flex;
 }

@@ -16,27 +16,46 @@
         <a href="#">project</a>
         <a href="#">Contact</a>
     </nav>
+    <button onclick="sergio()">  Whoo am i 
+    </button>
+    <p id="message"></p>
     </header>
-    <div class="fraseuno">
-        <section>
-        <h2>About me </h2>
-        <p> I am a web developer pasionate about creating websites</p>
-        </section>
-    </div>
-     <div class="frasedos">
-        <section>
-        <h2 >Recent projects  </h2>
-        <p> portfolio website built using html and css</p>
-        </section>
-        </div>
-        <article>
-          <div class="frasetres">
+    <aside>
         <h3>Skills</h3>
         <p>html</p>
         <p>css</p>
         <p>javascript</p>
+        </aside>
+    <div class="fraseuno">
+        <article>
+        <h2>About me </h2>
+        <p> I am a web developer pasionate about creating websites</p>
+        </article>
+        <article>
+        <h2 >Recent projects  </h2>
+        <p> portfolio website built using html and css</p>
+        <button onclick=darkwhite()>  background
+    </button>
+    <input type="text" = "name ">
+    <button onclick=submitforce() > submit </button>
         </article>
           </div>
     <footer>2026 my portfolio </footer>
+    <script>
+    function sergio(){
+        document.getElementById("message").innerHTML = 
+        "welcome to sergio portfolio"
+    }
+    function darkwhite(){
+        document.body.classList.toggle("dark");
+    }
+    function submitforce(){
+        let name = document.getElementById("name").value;
+        if (name == "")
+        alert("Please enter your name")
+      else
+      alert ("hello" + name)
+    }
+</script>
 </body>
 </html>
